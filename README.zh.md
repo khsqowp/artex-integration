@@ -1,6 +1,6 @@
 # ARTEx Agent Profiles for Claude Desktop
 
-English · [한국어](README.ko.md) · [日本語](README.ja.md) · [简体中文](README.zh.md)
+[한국어](README.md) · [English](README.en.md) · [日本語](README.ja.md) · 简体中文
 
 本仓库用于在本地 Claude Desktop 会话中连接由操作者配置的 ARTEx 服务，包含 Claude 代理配置、技能、命令以及 Python MCP 连接器。
 

@@ -1,6 +1,6 @@
 # ARTEx Agent Profiles for Claude Desktop
 
-English · [한국어](README.ko.md) · [日本語](README.ja.md) · [简体中文](README.zh.md)
+[한국어](README.md) · [English](README.en.md) · 日本語 · [简体中文](README.zh.md)
 
 運用者が設定した ARTEx サーバーをローカルの Claude Desktop セッションから利用するための連携リポジトリです。Claude エージェントプロファイル、スキル、コマンドと Python MCP コネクターを提供します。
 
