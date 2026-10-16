@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "artex_ro": {
+      "command": "C:\\Path\\To\\Claude\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "artex_agent.desktop_mcp"],
+      "env": {"PYTHONPATH": "C:\\Path\\To\\Claude\\src", "ARTEX_API_BASE_URL": "http://127.0.0.1:8787"}
+    },
+    "artex_evidence_writer": {
+      "command": "C:\\Path\\To\\Claude\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "artex_agent.desktop_diagnostic_writer"],
+      "env": {"PYTHONPATH": "C:\\Path\\To\\Claude\\src", "ARTEX_API_BASE_URL": "http://127.0.0.1:8787"}
+    },
+    "artex_task_setup": {
+      "command": "C:\\Path\\To\\Claude\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "artex_agent.desktop_task_setup_mcp"],
+      "env": {"PYTHONPATH": "C:\\Path\\To\\Claude\\src", "ARTEX_API_BASE_URL": "http://127.0.0.1:8787"}
+    },
+    "artex_target_request": {
+      "command": "C:\\Path\\To\\Claude\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "artex_agent.desktop_target_mcp"],
+      "env": {"PYTHONPATH": "C:\\Path\\To\\Claude\\src", "ARTEX_API_BASE_URL": "http://127.0.0.1:8787"}
+    }
+  }
+}

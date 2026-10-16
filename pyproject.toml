@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "artex-agent"
+version = "0.1.0"
+description = "ARTEx Cowork MCP connectors for Claude Desktop"
+requires-python = ">=3.11"
+dependencies = [
+  "mcp>=1,<2",
+  "keyring>=25,<27",
+]
+
+[project.scripts]
+artex-mcp-check = "artex_agent.desktop_mcp:main"
+artex-mcp-observation = "artex_agent.desktop_observation_mcp:main"
+artex-mcp-diagnostic-writer = "artex_agent.desktop_diagnostic_writer:main"
+artex-mcp-task-setup = "artex_agent.desktop_task_setup_mcp:main"
+artex-mcp-target = "artex_agent.desktop_target_mcp:main"
+artex-auth-store = "artex_agent.auth_store:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

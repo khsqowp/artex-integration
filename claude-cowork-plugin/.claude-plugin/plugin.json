@@ -1,0 +1,9 @@
+{
+  "name": "artex-agent-profiles",
+  "displayName": "ARTEx Agent Profiles",
+  "version": "0.3.30",
+  "description": "Cowork adaptations of ARTEx roles, skills, batched task reads, and native task-scoped MCP connectors and a bounded target-request bridge.",
+  "author": {
+    "name": "Local project adaptation"
+  }
+}

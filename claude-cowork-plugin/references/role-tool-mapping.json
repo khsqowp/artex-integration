@@ -1,0 +1,779 @@
+{
+  "plugin": "artex-agent-profiles",
+  "runtime_equivalence": false,
+  "source_tool_inventory": {
+    "source": "artex-agent/config/artex-tool-bindings.json (user-provided ARTEx UI inventory; not a live Cowork schema)",
+    "count": 51,
+    "tools": [
+      {
+        "name": "add_company_scope",
+        "agents": [
+          "mainagent",
+          "planner",
+          "auto"
+        ]
+      },
+      {
+        "name": "add_hint",
+        "agents": [
+          "mainagent"
+        ]
+      },
+      {
+        "name": "add_intent",
+        "agents": [
+          "mainagent",
+          "planner"
+        ]
+      },
+      {
+        "name": "add_task_hint",
+        "agents": [
+          "auto"
+        ]
+      },
+      {
+        "name": "add_task_scope",
+        "agents": [
+          "mainagent",
+          "planner"
+        ]
+      },
+      {
+        "name": "bind_finding_traffic",
+        "agents": [
+          "reporter",
+          "auto"
+        ]
+      },
+      {
+        "name": "create_custom_tool",
+        "agents": [
+          "auto"
+        ]
+      },
+      {
+        "name": "create_mcp",
+        "agents": [
+          "auto"
+        ]
+      },
+      {
+        "name": "create_skill",
+        "agents": [
+          "auto"
+        ]
+      },
+      {
+        "name": "delete_assets_by_host",
+        "agents": [
+          "auto"
+        ]
+      },
+      {
+        "name": "expand_digest",
+        "agents": [
+          "mainagent",
+          "planner"
+        ]
+      },
+      {
+        "name": "get_finding_retest_context",
+        "agents": [
+          "retester"
+        ]
+      },
+      {
+        "name": "get_finding_traffic",
+        "agents": [
+          "auto",
+          "reporter",
+          "worker",
+          "planner",
+          "mainagent",
+          "pentest"
+        ]
+      },
+      {
+        "name": "get_task_graph",
+        "agents": [
+          "auto",
+          "reporter"
+        ]
+      },
+      {
+        "name": "get_task_node_detail",
+        "agents": [
+          "auto",
+          "reporter"
+        ]
+      },
+      {
+        "name": "get_task_worker_trace",
+        "agents": [
+          "auto",
+          "reporter"
+        ]
+      },
+      {
+        "name": "get_worker_output",
+        "agents": [
+          "mainagent",
+          "planner"
+        ]
+      },
+      {
+        "name": "get_worker_trace",
+        "agents": [
+          "mainagent",
+          "planner",
+          "worker"
+        ]
+      },
+      {
+        "name": "goal_met",
+        "agents": []
+      },
+      {
+        "name": "graph_overview",
+        "agents": [
+          "mainagent",
+          "planner"
+        ]
+      },
+      {
+        "name": "insert_assets",
+        "agents": [
+          "mainagent",
+          "worker",
+          "auto",
+          "pentest"
+        ]
+      },
+      {
+        "name": "kill_work",
+        "agents": [
+          "planner"
+        ]
+      },
+      {
+        "name": "list_assets",
+        "agents": [
+          "mainagent",
+          "planner",
+          "worker",
+          "auto",
+          "pentest"
+        ]
+      },
+      {
+        "name": "list_companies",
+        "agents": [
+          "planner",
+          "auto",
+          "pentest"
+        ]
+      },
+      {
+        "name": "list_facts",
+        "agents": [
+          "mainagent",
+          "planner"
+        ]
+      },
+      {
+        "name": "list_findings",
+        "agents": [
+          "mainagent",
+          "planner",
+          "worker",
+          "pentest"
+        ]
+      },
+      {
+        "name": "list_goals",
+        "agents": [
+          "planner"
+        ]
+      },
+      {
+        "name": "list_llm_profiles",
+        "agents": [
+          "auto"
+        ]
+      },
+      {
+        "name": "list_task_findings",
+        "agents": [
+          "auto",
+          "reporter"
+        ]
+      },
+      {
+        "name": "list_task_worker_traces",
+        "agents": [
+          "auto",
+          "reporter"
+        ]
+      },
+      {
+        "name": "list_tasks",
+        "agents": [
+          "auto"
+        ]
+      },
+      {
+        "name": "list_untested_assets",
+        "agents": [
+          "mainagent",
+          "planner"
+        ]
+      },
+      {
+        "name": "node_detail",
+        "agents": [
+          "mainagent",
+          "planner",
+          "worker"
+        ]
+      },
+      {
+        "name": "pause_task",
+        "agents": [
+          "auto"
+        ]
+      },
+      {
+        "name": "prove_goal",
+        "agents": [
+          "planner"
+        ]
+      },
+      {
+        "name": "record_fact",
+        "agents": [
+          "mainagent",
+          "worker"
+        ]
+      },
+      {
+        "name": "record_finding_retest_result",
+        "agents": [
+          "retester"
+        ]
+      },
+      {
+        "name": "report_finding",
+        "agents": [
+          "mainagent",
+          "planner",
+          "worker",
+          "auto",
+          "pentest"
+        ]
+      },
+      {
+        "name": "search_all_worker_traces",
+        "agents": [
+          "mainagent",
+          "planner",
+          "worker"
+        ]
+      },
+      {
+        "name": "search_task_worker_traces",
+        "agents": [
+          "auto",
+          "reporter"
+        ]
+      },
+      {
+        "name": "set_constraints",
+        "agents": [
+          "mainagent",
+          "goals"
+        ]
+      },
+      {
+        "name": "set_goals",
+        "agents": [
+          "mainagent",
+          "goals"
+        ]
+      },
+      {
+        "name": "spawn_task",
+        "agents": [
+          "auto"
+        ]
+      },
+      {
+        "name": "steer_work",
+        "agents": [
+          "mainagent",
+          "planner"
+        ]
+      },
+      {
+        "name": "traffic_blob",
+        "agents": [
+          "worker",
+          "reporter"
+        ]
+      },
+      {
+        "name": "traffic_get",
+        "agents": [
+          "worker",
+          "reporter"
+        ]
+      },
+      {
+        "name": "traffic_search",
+        "agents": [
+          "worker",
+          "reporter"
+        ]
+      },
+      {
+        "name": "update_custom_tool",
+        "agents": [
+          "auto"
+        ]
+      },
+      {
+        "name": "update_finding_report",
+        "agents": [
+          "auto",
+          "reporter"
+        ]
+      },
+      {
+        "name": "update_mcp",
+        "agents": [
+          "auto"
+        ]
+      },
+      {
+        "name": "update_skill_file",
+        "agents": [
+          "auto"
+        ]
+      }
+    ]
+  },
+  "roles": {
+    "retester": {
+      "sourceToolNames": [
+        "get_finding_retest_context",
+        "record_finding_retest_result"
+      ],
+      "nativeToolParity": "partial",
+      "source": [
+        "agents/retester/system.md"
+      ],
+      "note": "Cowork can inspect an existing finding and write an evidence-backed retest result into ARTEx native Retests history after the retest was actually performed and separately authorized. The plugin does not execute target requests.",
+      "exposedTools": [
+        "artex_get_task_context",
+        "artex_get_task",
+        "artex_list_task_findings",
+        "artex_get_finding",
+        "artex_read_workspace_file",
+        "artex_get_task_surface",
+        "artex_get_task_activity_detail",
+        "artex_record_finding_retest_result",
+        "artex_get_task_surface_bundle",
+        "artex_list_cowork_traffic",
+        "artex_get_cowork_traffic",
+        "artex_read_cowork_traffic_blob",
+        "artex_get_finding_traffic",
+        "artex_read_finding_traffic_body"
+      ],
+      "coworkFile": "agents/retester.md",
+      "trigger": "retest_manual"
+    },
+    "pentest": {
+      "sourceToolNames": [
+        "get_finding_traffic",
+        "insert_assets",
+        "list_assets",
+        "list_companies",
+        "list_findings",
+        "report_finding"
+      ],
+      "nativeToolParity": "partial",
+      "source": [
+        "agents/pentest/system.md"
+      ],
+      "note": "The Cowork pentest profile can send bounded, explicitly authorized in-scope requests through artex_target_request and can separately opt into native ARTEx Traffic capture. Authorized writer tools can save checkpoints, task graph facts/intents, confirmed findings, same-task Traffic bindings, observed asset metadata, and a Task report with native readback. This is Cowork-session execution, not the ARTEx background worker or a broad autonomous scanner.",
+      "exposedTools": [
+        "artex_get_task_context",
+        "artex_get_task_surface",
+        "artex_get_task_activity_detail",
+        "artex_record_diagnostic_evidence",
+        "artex_record_task_fact",
+        "artex_report_confirmed_finding",
+        "artex_bind_cowork_traffic_to_finding",
+        "artex_register_task_assets",
+        "artex_add_task_intents",
+        "artex_complete_cowork_intent",
+        "artex_save_task_report",
+        "artex_get_task_surface_bundle",
+        "artex_list_cowork_traffic",
+        "artex_get_cowork_traffic",
+        "artex_read_cowork_traffic_blob",
+        "artex_begin_target_run",
+        "artex_send_target_request",
+        "artex_send_target_batch",
+        "artex_close_target_run"
+      ],
+      "coworkFile": "agents/pentest.md",
+      "trigger": "user_invoked"
+    },
+    "mainagent": {
+      "sourceToolNames": [
+        "add_company_scope",
+        "add_hint",
+        "add_intent",
+        "add_task_scope",
+        "expand_digest",
+        "get_finding_traffic",
+        "get_worker_output",
+        "get_worker_trace",
+        "graph_overview",
+        "insert_assets",
+        "list_assets",
+        "list_facts",
+        "list_findings",
+        "list_untested_assets",
+        "node_detail",
+        "record_fact",
+        "report_finding",
+        "search_all_worker_traces",
+        "set_constraints",
+        "set_goals",
+        "steer_work"
+      ],
+      "nativeToolParity": "partial",
+      "source": [
+        "agents/mainagent/system.md",
+        "agents/mainagent/wrapup.md"
+      ],
+      "note": "Cowork can append authorized intents and facts, register confirmed findings and observed assets, save a Task-wide report, apply explicitly directed intercept decisions, change task-owned intercept rules with operation-specific confirmation, update an existing Finding status only on direct operator instruction, and prove goals from existing same-task evidence after exact operator confirmation. It does not enqueue ARTEx workers or execute target actions through ARTEx.",
+      "exposedTools": [
+        "artex_health",
+        "artex_get_task_context",
+        "artex_get_dashboard_snapshot",
+        "artex_list_tasks",
+        "artex_get_task",
+        "artex_record_diagnostic_evidence",
+        "artex_add_goal",
+        "artex_add_constraint",
+        "artex_add_task_scope",
+        "artex_manage_task_setup",
+        "artex_manage_task_intercept_rule",
+        "artex_record_task_fact",
+        "artex_report_confirmed_finding",
+        "artex_save_task_report",
+        "artex_get_task_surface",
+        "artex_get_task_activity_detail",
+        "artex_register_task_assets",
+        "artex_decide_intercept",
+        "artex_add_task_intents",
+        "artex_complete_cowork_intent",
+        "artex_get_task_surface_bundle",
+        "artex_list_cowork_traffic",
+        "artex_get_cowork_traffic",
+        "artex_read_cowork_traffic_blob",
+        "artex_prove_goal",
+        "artex_pause_task",
+        "artex_update_finding_status"
+      ],
+      "coworkFile": "agents/mainagent.md",
+      "trigger": "user_turn"
+    },
+    "auto": {
+      "sourceToolNames": [
+        "add_company_scope",
+        "add_task_hint",
+        "bind_finding_traffic",
+        "create_custom_tool",
+        "create_mcp",
+        "create_skill",
+        "delete_assets_by_host",
+        "get_finding_traffic",
+        "get_task_graph",
+        "get_task_node_detail",
+        "get_task_worker_trace",
+        "insert_assets",
+        "list_assets",
+        "list_companies",
+        "list_llm_profiles",
+        "list_task_findings",
+        "list_task_worker_traces",
+        "list_tasks",
+        "pause_task",
+        "report_finding",
+        "search_task_worker_traces",
+        "spawn_task",
+        "update_custom_tool",
+        "update_finding_report",
+        "update_mcp",
+        "update_skill_file"
+      ],
+      "nativeToolParity": "partial",
+      "source": [
+        "agents/auto/system.md"
+      ],
+      "note": "Cowork can read task state, append approved task setup, change task-owned intercept rules after an exact operation confirmation, update an existing finding report or status only on direct operator instruction, register observed task assets, and explicitly pause ARTEx native planner/worker execution. Resume is omitted because it invokes ARTEx separate LLM runtime; Cowork cannot administer ARTEx tools or plugins.",
+      "exposedTools": [
+        "artex_health",
+        "artex_get_task_context",
+        "artex_get_dashboard_snapshot",
+        "artex_list_tasks",
+        "artex_get_task",
+        "artex_add_goal",
+        "artex_add_constraint",
+        "artex_add_task_scope",
+        "artex_manage_task_setup",
+        "artex_manage_task_intercept_rule",
+        "artex_get_task_surface",
+        "artex_get_task_activity_detail",
+        "artex_update_finding_report",
+        "artex_register_task_assets",
+        "artex_get_task_surface_bundle",
+        "artex_list_cowork_traffic",
+        "artex_get_cowork_traffic",
+        "artex_read_cowork_traffic_blob",
+        "artex_pause_task",
+        "artex_update_finding_status"
+      ],
+      "coworkFile": "agents/auto.md",
+      "trigger": "user_invoked"
+    },
+    "planner": {
+      "sourceToolNames": [
+        "add_company_scope",
+        "add_intent",
+        "add_task_scope",
+        "expand_digest",
+        "get_finding_traffic",
+        "get_worker_output",
+        "get_worker_trace",
+        "graph_overview",
+        "kill_work",
+        "list_assets",
+        "list_companies",
+        "list_facts",
+        "list_findings",
+        "list_goals",
+        "list_untested_assets",
+        "node_detail",
+        "prove_goal",
+        "report_finding",
+        "search_all_worker_traces",
+        "steer_work"
+      ],
+      "nativeToolParity": "partial",
+      "source": [
+        "agents/planner/system.md",
+        "agents/planner/wrapup.md",
+        "agents/planner/task-timeout-wrapup.md"
+      ],
+      "note": "Cowork can append authorized intents and prove a specific goal only from existing same-task evidence after explicit operator confirmation. It does not enqueue ARTEx workers or execute target actions through ARTEx.",
+      "exposedTools": [
+        "artex_get_task_context",
+        "artex_list_tasks",
+        "artex_get_task",
+        "artex_add_task_scope",
+        "artex_get_task_surface",
+        "artex_get_task_activity_detail",
+        "artex_add_task_intents",
+        "artex_get_task_surface_bundle",
+        "artex_list_cowork_traffic",
+        "artex_get_cowork_traffic",
+        "artex_read_cowork_traffic_blob",
+        "artex_prove_goal"
+      ],
+      "coworkFile": "agents/planner.md",
+      "trigger": "planner_cycle"
+    },
+    "reporter": {
+      "sourceToolNames": [
+        "bind_finding_traffic",
+        "get_finding_traffic",
+        "get_task_graph",
+        "get_task_node_detail",
+        "get_task_worker_trace",
+        "list_task_findings",
+        "list_task_worker_traces",
+        "search_task_worker_traces",
+        "traffic_blob",
+        "traffic_get",
+        "traffic_search",
+        "update_finding_report"
+      ],
+      "nativeToolParity": "partial",
+      "source": [
+        "agents/reporter/system.md"
+      ],
+      "note": "Cowork can inspect Finding-bound native traffic, link selected same-task Cowork captures after exact confirmation, save a reviewed report to a task-owned native finding with an optional evidence-version check, and save an authorized Task-wide Markdown report to the Report tab.",
+      "exposedTools": [
+        "artex_get_task_context",
+        "artex_get_task",
+        "artex_record_diagnostic_evidence",
+        "artex_list_task_findings",
+        "artex_get_finding",
+        "artex_read_workspace_file",
+        "artex_get_task_surface",
+        "artex_get_task_activity_detail",
+        "artex_update_finding_report",
+        "artex_save_task_report",
+        "artex_get_task_surface_bundle",
+        "artex_list_cowork_traffic",
+        "artex_get_cowork_traffic",
+        "artex_read_cowork_traffic_blob",
+        "artex_bind_cowork_traffic_to_finding",
+        "artex_get_finding_traffic",
+        "artex_read_finding_traffic_body"
+      ],
+      "coworkFile": "agents/reporter.md",
+      "trigger": "finding_created"
+    },
+    "goals": {
+      "sourceToolNames": [
+        "set_constraints",
+        "set_goals"
+      ],
+      "nativeToolParity": "not-implemented",
+      "source": [
+        "agents/goals/system.md",
+        "agents/goals/code-owned-scope-tail.md"
+      ],
+      "note": "Cowork can add goals/constraints, update or delete exact goals/constraints, and prove goals from same-task evidence with exact confirmation. It does not start the ARTEx execution engine.",
+      "exposedTools": [
+        "artex_get_task_context",
+        "artex_add_goal",
+        "artex_add_constraint",
+        "artex_manage_task_setup",
+        "artex_get_task_surface",
+        "artex_get_task_activity_detail",
+        "artex_get_task_surface_bundle"
+      ],
+      "coworkFile": "agents/goals.md",
+      "trigger": "task_setup"
+    },
+    "worker": {
+      "sourceToolNames": [
+        "get_finding_traffic",
+        "get_worker_trace",
+        "insert_assets",
+        "list_assets",
+        "list_findings",
+        "node_detail",
+        "record_fact",
+        "report_finding",
+        "search_all_worker_traces",
+        "traffic_blob",
+        "traffic_get",
+        "traffic_search"
+      ],
+      "nativeToolParity": "partial",
+      "source": [
+        "agents/worker/system.md",
+        "agents/worker/wrapup.md",
+        "agents/worker/task-timeout-wrapup.md"
+      ],
+      "note": "Cowork can execute one assigned intent in its own session, append task-scoped facts and confirmed findings, and mark that intent done or blocked with a native Worker-session activity record. This does not enqueue the ARTEx scheduler.",
+      "exposedTools": [
+        "artex_get_task_context",
+        "artex_record_diagnostic_evidence",
+        "artex_record_task_fact",
+        "artex_report_confirmed_finding",
+        "artex_get_task_surface",
+        "artex_get_task_activity_detail",
+        "artex_register_task_assets",
+        "artex_complete_cowork_intent",
+        "artex_get_task_surface_bundle",
+        "artex_list_cowork_traffic",
+        "artex_get_cowork_traffic",
+        "artex_read_cowork_traffic_blob"
+      ],
+      "coworkFile": "agents/worker.md",
+      "trigger": "claimed_intent"
+    }
+  },
+  "currently_exposed_tools": {
+    "artex_ro": [
+      "artex_health",
+      "artex_auth_status",
+      "artex_list_tasks",
+      "artex_get_task",
+      "artex_get_task_context",
+      "artex_get_dashboard_snapshot",
+      "artex_list_task_findings",
+      "artex_get_finding",
+      "artex_read_workspace_file",
+      "artex_get_task_surface",
+      "artex_get_task_activity_detail",
+      "artex_get_task_surface_bundle",
+      "artex_list_cowork_traffic",
+      "artex_get_cowork_traffic",
+      "artex_read_cowork_traffic_blob",
+      "artex_get_finding_traffic",
+      "artex_read_finding_traffic_body"
+    ],
+    "artex_evidence_writer": [
+      "artex_record_diagnostic_evidence",
+      "artex_record_task_fact",
+      "artex_report_confirmed_finding",
+      "artex_update_finding_status",
+      "artex_update_finding_report",
+      "artex_save_task_report",
+      "artex_register_task_assets",
+      "artex_record_finding_retest_result",
+      "artex_bind_cowork_traffic_to_finding",
+      "artex_decide_intercept",
+      "artex_add_task_intents",
+      "artex_complete_cowork_intent",
+      "artex_prove_goal",
+      "artex_pause_task"
+    ],
+    "artex_task_setup": [
+      "artex_add_goal",
+      "artex_add_constraint",
+      "artex_add_task_scope",
+      "artex_manage_task_setup",
+      "artex_manage_task_intercept_rule"
+    ],
+    "artex_target_request": [
+      "artex_begin_target_run",
+      "artex_send_target_request",
+      "artex_send_target_batch",
+      "artex_close_target_run"
+    ],
+    "limitations": "Cowork can append authorized intents, record completion in native intent and Worker-session history, prove goals from existing task-local evidence after explicit confirmation, pause ARTEx execution on direct operator request, update a task-owned finding status after exact operator confirmation, record evidence-backed retests, decide task-owned pending intercepts after explicit operator decisions, change task-owned intercept rules after exact operation confirmation, and send budgeted target requests from the Cowork session after exact per-run authorization. When record_traffic=yes is explicitly bound into that authorization, completed exchanges are persisted in ARTEx native Traffic and a task activity event; otherwise no native Traffic capture occurs. These requests do not enqueue ARTEx workers. Native ARTEx background task execution remains unavailable through Cowork subscription; resuming ARTEx invokes its separate LLM runtime."
+  },
+  "skills": {
+    "api_recon": {
+      "assignment": "worker,pentest",
+      "visibility": "captured inventory says visible to worker/auto/pentest; Cowork UI must be rechecked",
+      "path": "skills/api-recon"
+    },
+    "playwright_cli": {
+      "assignment": "packaged reference; no ARTEx role assignment asserted",
+      "visibility": "not confirmed",
+      "path": "skills/playwright-cli"
+    },
+    "scopesentry": {
+      "assignment": "packaged reference; disabled",
+      "visibility": "not confirmed; external MCP schema/key not present",
+      "path": "skills/scopesentry"
+    }
+  },
+  "not_bundled": {
+    "targetRequestTools": "Burp and Chrome DevTools are not included by this plugin; use only separately connected and authorized session tools.",
+    "scopeSentryBrowser": "No verified live tool schemas/connection details are available; not configured.",
+    "port18787": "Never configured or contacted."
+  }
+}
