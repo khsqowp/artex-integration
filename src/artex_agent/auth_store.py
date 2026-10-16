@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import getpass
+import os
 import sys
 
 import keyring
@@ -13,6 +14,16 @@ from .artex_api import ArtexClient
 
 SERVICE = "artex-agent-local"
 USERNAME = "ARTEX"
+
+
+def get_admin_password() -> str | None:
+    """Read extension-provided secret first, then the OS credential store.
+
+    Desktop extensions pass sensitive user_config values through the process
+    environment. The existing manual connector continues to use Credential
+    Manager when that variable is absent.
+    """
+    return os.environ.get("ARTEX_ADMIN_PASSWORD") or keyring.get_password(SERVICE, USERNAME)
 
 
 def main() -> None:

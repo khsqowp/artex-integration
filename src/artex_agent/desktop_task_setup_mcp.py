@@ -10,18 +10,17 @@ from __future__ import annotations
 
 import json
 
-import keyring
 from mcp.server.fastmcp import FastMCP
 
 from .artex_api import ArtexClient, task_intercept_rule_confirmation, task_setup_confirmation
-from .auth_store import SERVICE, USERNAME
+from .auth_store import get_admin_password
 
 
 server = FastMCP("artex-task-setup")
 
 
 def _authenticated_client() -> ArtexClient:
-    password = keyring.get_password(SERVICE, USERNAME)
+    password = get_admin_password()
     if not password:
         raise RuntimeError("ARTEx 자격 증명이 없습니다. 먼저 artex-auth-store를 실행하세요.")
     client = ArtexClient()

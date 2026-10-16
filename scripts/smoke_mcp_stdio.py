@@ -17,7 +17,7 @@ from mcp.client.stdio import stdio_client
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PYTHON = Path(sys.executable)
+PYTHON = ROOT / ".venv" / "Scripts" / "python.exe"
 SERVERS = {
     "artex_ro": ("artex_agent.desktop_mcp", 17),
     "artex_evidence_writer": ("artex_agent.desktop_diagnostic_writer", 14),
@@ -61,4 +61,3 @@ if __name__ == "__main__":
     except Exception as exc:
         print(f"MCP stdio smoke check failed: {type(exc).__name__}: {exc}", file=sys.stderr)
         raise SystemExit(1)
-

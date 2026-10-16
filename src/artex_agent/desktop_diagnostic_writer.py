@@ -15,12 +15,11 @@ import uuid
 from typing import Annotated, Any
 from urllib.parse import urlsplit
 
-import keyring
 from mcp.server.fastmcp import FastMCP
 from pydantic import Field
 
 from .artex_api import ArtexClient
-from .auth_store import SERVICE, USERNAME
+from .auth_store import get_admin_password
 
 
 server = FastMCP("artex-diagnostic-writer")
@@ -35,7 +34,7 @@ SECRET_PATTERNS = (
 
 
 def _authenticated_client() -> ArtexClient:
-    password = keyring.get_password(SERVICE, USERNAME)
+    password = get_admin_password()
     if not password:
         raise RuntimeError("ARTEx 자격 증명이 없습니다. 먼저 artex-auth-store를 실행하세요.")
     client = ArtexClient()

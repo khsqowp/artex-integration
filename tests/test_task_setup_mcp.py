@@ -235,7 +235,7 @@ class TaskSetupAPITests(TestCase):
         client = ArtexClient()
         with patch.object(client, "_request") as request:
             with self.assertRaises(ValueError):
-                client.read_workspace_file(r"C:\Users\fixture\secret.txt")
+                client.read_workspace_file(r"C:\Users\user\secret.txt")
         request.assert_not_called()
 
     def test_task_workspace_read_is_limited_to_that_task(self):
@@ -405,4 +405,3 @@ if __name__ == "__main__":
     import unittest
 
     unittest.main()
-

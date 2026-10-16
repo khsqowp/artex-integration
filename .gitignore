@@ -1,8 +1,6 @@
+.venv/
 __pycache__/
 *.py[cod]
-.venv/
 .env
-*.log
-*.zip
-dist/
-.pytest_cache/
+results/
+.build/

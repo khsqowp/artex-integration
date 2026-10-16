@@ -1,0 +1,48 @@
+{
+  "manifest_version": "0.4",
+  "name": "artex-desktop",
+  "display_name": "ARTEx Local Connector",
+  "version": "0.4.0",
+  "description": "Claude Desktop Cowork용 로컬 ARTEx MCP 연결기",
+  "long_description": "로컬 ARTEx 서버에 연결하는 MCP 도구를 제공합니다. ARTEx 서버는 별도로 설치·실행해야 합니다. 대상 요청 도구는 명시적으로 허용된 작업 범위 안에서만 사용하세요.",
+  "author": {
+    "name": "ARTEx contributors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khsqowp/artex-integration.git"
+  },
+  "license": "AGPL-3.0",
+  "server": {
+    "type": "uv",
+    "entry_point": "src/artex_agent/desktop_extension_mcp.py",
+    "mcp_config": {
+      "command": "uv",
+      "args": ["run", "--directory", "${__dirname}", "python", "-m", "artex_agent.desktop_extension_mcp"],
+      "env": {
+        "ARTEX_API_BASE_URL": "${user_config.artex_base_url}",
+        "ARTEX_ADMIN_PASSWORD": "${user_config.artex_admin_password}"
+      }
+    }
+  },
+  "tools_generated": true,
+  "compatibility": {
+    "platforms": ["win32"]
+  },
+  "user_config": {
+    "artex_base_url": {
+      "type": "string",
+      "title": "ARTEx 주소",
+      "description": "본인이 실행한 ARTEx 로컬 주소. 127.0.0.1 또는 localhost의 8787 포트만 허용됩니다.",
+      "default": "http://127.0.0.1:8787",
+      "required": true
+    },
+    "artex_admin_password": {
+      "type": "string",
+      "title": "ARTEx 관리자 비밀번호",
+      "description": "ARTEx 로그인 비밀번호. 확장 설정에서 안전하게 보관됩니다.",
+      "sensitive": true,
+      "required": true
+    }
+  }
+}

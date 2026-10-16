@@ -98,12 +98,12 @@ class TargetRequestPolicyTests(unittest.TestCase):
         )
 
     def test_reflected_credentials_and_contact_values_are_redacted(self):
-        request = '{"email":"user@example.invalid","password":"fixture-password","username":"account@example.invalid"}'
-        response = b'{"message":"Welcome account@example.invalid; password was fixture-password","display":"user@example.invalid"}'
+        request = '{"email":"test@example.test","password":"test1","username":"test@test.com"}'
+        response = b'{"message":"Welcome test@test.com; password was test1","display":"test@example.test"}'
         redacted = target._redacted_body(response, target._sensitive_request_values(request))
-        self.assertNotIn("account@example.invalid", redacted)
-        self.assertNotIn("user@example.invalid", redacted)
-        self.assertNotIn("fixture-password", redacted)
+        self.assertNotIn("test@test.com", redacted)
+        self.assertNotIn("test@example.test", redacted)
+        self.assertNotIn("test1", redacted)
         self.assertIn("[REQUEST VALUE REDACTED]", redacted)
 
     def test_safe_headers_allow_origin_but_reject_host_and_credentials(self):
@@ -210,5 +210,3 @@ class TargetRequestPolicyTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
-
